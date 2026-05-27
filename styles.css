@@ -1,0 +1,265 @@
+/* ===== General Styles ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f4fff4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin: 0 0 10px 0;
+}
+
+header p {
+    font-size: 20px;
+    margin: 0 0 20px 0;
+}
+
+/* ===== Button ===== */
+.btn {
+    background: #ff9800;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #f57c00;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* ===== Section ===== */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    color: #4caf50;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* ===== Eco Circle ===== */
+.eco-circle {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.circle:focus {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+.blue { background: #2196f3; }
+.brown { background: #795548; }
+.green { background: #4caf50; }
+.gray { background: #757575; }
+.orange { background: #ff9800; }
+
+/* ===== Info Display ===== */
+#info {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #4caf50;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+/* ===== Cards ===== */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #4caf50;
+    margin-top: 0;
+}
+
+/* ===== Games ===== */
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.game {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #4caf50;
+}
+
+.game:hover {
+    background: #c8e6c9;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.game:focus {
+    outline: 3px solid #4caf50;
+    outline-offset: 2px;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .eco-circle {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 350px;
+    }
+
+    .circle {
+        width: 120px;
+        height: 120px;
+        font-size: 14px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .games-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .eco-circle {
+        grid-template-columns: 1fr;
+        max-width: 150px;
+    }
+
+    .circle {
+        width: 130px;
+        height: 130px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+}
+
+/* ===== Accessibility ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@media (prefers-contrast: more) {
+    .circle {
+        border: 3px solid white;
+    }
+
+    .card {
+        border: 2px solid #4caf50;
+    }
+}
