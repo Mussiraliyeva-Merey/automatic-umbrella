@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Экологические привычки будущего - интерактивное образовательное приложение для детей">
+    <meta name="theme-color" content="#4caf50">
+    <title>Экологические привычки будущего</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Экологические привычки будущего</h1>
+    <p>Маленькие привычки — большое будущее!</p>
+    <button class="btn" onclick="startGame()">Начать играть</button>
+</header>
+
+<section>
+    <h2>Экокруг</h2>
+
+    <div class="eco-circle">
+        <div class="circle blue" onclick="showText('Экономь воду!')" role="button" tabindex="0" aria-label="Вода">
+            💧 Вода
+        </div>
+
+        <div class="circle brown" onclick="showText('Сортируй мусор!')" role="button" tabindex="0" aria-label="Мусор">
+            🗑️ Мусор
+        </div>
+
+        <div class="circle green" onclick="showText('Береги деревья!')" role="button" tabindex="0" aria-label="Лес">
+            🌳 Лес
+        </div>
+
+        <div class="circle gray" onclick="showText('Выбирай экологичный транспорт!')" role="button" tabindex="0" aria-label="Транспорт">
+            🚴 Транспорт
+        </div>
+
+        <div class="circle orange" onclick="showText('Выключай свет!')" role="button" tabindex="0" aria-label="Энергия">
+            💡 Энергия
+        </div>
+    </div>
+
+    <h3 id="info" aria-live="polite" aria-atomic="true"></h3>
+</section>
+
+<section>
+    <h2>Экорюкзак</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>❄️ Снежный барс</h3>
+            <p>Редкое животное из Красной книги.</p>
+        </div>
+
+        <div class="card">
+            <h3>🦭 Каспийский тюлень</h3>
+            <p>Страдает от загрязнения воды.</p>
+        </div>
+
+        <div class="card">
+            <h3>🦌 Сайгак</h3>
+            <p>Нуждается в защите природы.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Экологические игры</h2>
+
+    <div class="games-container">
+        <div class="game" onclick="playGame('waste')">♻️ Сортировка мусора</div>
+        <div class="game" onclick="playGame('light')">💡 Выключи свет</div>
+        <div class="game" onclick="playGame('forest')">🌳 Спаси лес</div>
+        <div class="game" onclick="playGame('transport')">🚲 Выбери экотранспорт</div>
+    </div>
+</section>
+
+<section>
+    <h2>Экотермины</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Экология</h3>
+            <p>Наука о природе и её защите.</p>
+        </div>
+
+        <div class="card">
+            <h3>Переработка</h3>
+            <p>Повторное использование мусора.</p>
+        </div>
+
+        <div class="card">
+            <h3>Климат</h3>
+            <p>Погода на Земле за долгое время.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Экологические привычки будущего</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
